@@ -198,7 +198,7 @@ header .theme-switcher .switch-container:hover::before {
   gap: 2rem;
 }
 
-.card {
+.followers .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,19 +215,19 @@ header .theme-switcher .switch-container:hover::before {
   padding: 3.5rem 0;
 }
 
-.card .card-body {
+.followers .card .card-body {
   text-align: center;
   position: relative;
 }
 
-.card .card-body li:nth-child(1),
-.card .card-body li:nth-child(3) {
+.followers .card .card-body li:nth-child(1),
+.followers .card .card-body li:nth-child(3) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.card .card-body li:nth-child(1) {
+.followers .card .card-body li:nth-child(1) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,15 +236,15 @@ header .theme-switcher .switch-container:hover::before {
           align-items: center;
 }
 
-.card .card-body li:nth-child(1) img {
+.followers .card .card-body li:nth-child(1) img {
   margin-right: 0.5rem;
 }
 
-.card .card-body li:nth-child(1) img + span {
+.followers .card .card-body li:nth-child(1) img + span {
   font-size: 1.4rem;
 }
 
-.card .card-body li:nth-child(2) {
+.followers .card .card-body li:nth-child(2) {
   margin: 3.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -255,11 +255,11 @@ header .theme-switcher .switch-container:hover::before {
           flex-direction: column;
 }
 
-.card .card-body li:nth-child(2) span.number {
+.followers .card .card-body li:nth-child(2) span.number {
   font-size: 6rem;
 }
 
-.card .card-body li:nth-child(2) span.number + span {
+.followers .card .card-body li:nth-child(2) span.number + span {
   margin-top: 0.3rem;
   font-size: 1.3rem;
   letter-spacing: 0.7rem;
@@ -267,11 +267,11 @@ header .theme-switcher .switch-container:hover::before {
   font-weight: 400;
 }
 
-.card:hover {
+.followers .card:hover {
   background-color: #0d0d0d;
 }
 
-.card::before {
+.followers .card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -288,12 +288,12 @@ header .theme-switcher .switch-container:hover::before {
   border-radius: inherit;
 }
 
-.card:active::before {
+.followers .card:active::before {
   -webkit-clip-path: circle(75% at 50% 50%);
           clip-path: circle(75% at 50% 50%);
 }
 
-.card::after {
+.followers .card::after {
   content: "";
   position: absolute;
   z-index: 3;
@@ -305,7 +305,7 @@ header .theme-switcher .switch-container:hover::before {
 }
 
 @media (max-width: 682px) {
-  .card {
+  .followers .card {
     width: 100%;
   }
 }
@@ -325,6 +325,77 @@ header .theme-switcher .switch-container:hover::before {
 
 .youtube::after {
   background: #c4032a;
+}
+
+.overview-container {
+  font-weight: 700;
+}
+
+.overview-container header h2 {
+  font-size: 2.8rem;
+  color: white;
+}
+
+.overview-container .overview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.overview-container .overview .card {
+  display: -ms-grid;
+  display: grid;
+  font-size: 1.4rem;
+  width: 28rem;
+  border-radius: 0.8rem;
+  padding: 2.3rem 3rem;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 1rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-container .overview .card .number-sm {
+  font-size: 4rem;
+}
+
+.overview-container .overview .card div:nth-child(odd) {
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.overview-container .overview .card div:nth-child(even) {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.overview-container .overview .card div:last-child {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  margin-bottom: 1rem;
+}
+
+.overview-container .overview .card div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 682px) {
+  .overview-container .overview .card {
+    width: 100%;
+  }
 }
 
 body.light-theme {
