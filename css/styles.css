@@ -39,6 +39,7 @@ body img {
 
 body {
   background-color: #1e202a;
+  position: relative;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -187,6 +188,19 @@ header h2 {
 
 .youtube::after {
   background: #c4032a;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 27.4rem;
+  border-radius: 0 0 2rem 2rem;
+  background: #1b1d27;
+  z-index: -1;
 }
 
 header.initial {
@@ -460,20 +474,24 @@ body.light-theme .card::before {
   background-color: #e6e6e6;
 }
 
-body.light-theme main header .theme-switcher > .switch-container {
+body.light-theme::before {
+  background: #f5f7ff;
+}
+
+body.light-theme main header.initial .theme-switcher > .switch-container {
   background: #aeb3cb;
 }
 
-body.light-theme main header .theme-switcher > .switch-container::before {
+body.light-theme main header.initial .theme-switcher > .switch-container::before {
   left: 2.7rem;
   background-color: #f5f7ff;
 }
 
-body.light-theme main header .theme-switcher > .switch-container:hover {
+body.light-theme main header.initial .theme-switcher > .switch-container:hover {
   background-color: #198ff5;
 }
 
-body.light-theme main header .theme-switcher > .switch-container:hover::before {
+body.light-theme main header.initial .theme-switcher > .switch-container:hover::before {
   -webkit-box-shadow: 0.2rem 0.2rem 2.3rem #fff;
           box-shadow: 0.2rem 0.2rem 2.3rem #fff;
 }

@@ -15,9 +15,12 @@ body.light-theme {
       background-color: darken(#fff, 10%);
     }
   }
+  &::before {
+    background: color($light, bg-pattern);
+  }
 }
 
-body.light-theme main header .theme-switcher > .switch-container {
+body.light-theme main header.initial .theme-switcher > .switch-container {
   background: color($toggler, light-theme);
   &::before {
     left: 2.7rem;
