@@ -1,27 +1,124 @@
-.bold {
-  color: color($dark, heading);
+//body - transition
+body {
+  background-color: color($dark, bg);
+  transition: all 0.4s ease;
 }
 
-.up {
-  color: color($up-down, up);
+// main
+main {
+  width: 85%;
+  margin: auto;
+  color: color($dark, text);
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
-.down {
-  color: color($up-down, down);
+//headers - 2 in page
+header {
+  padding: 4rem 0;
+  h1,
+  h2 {
+    font-size: 2.8rem;
+    @media (max-width: 399px) {
+      font-size: 6.3vw;
+    }
+  }
 }
 
+//parent for cards - (card-container)
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+//card design
+.card {
+  width: 28rem;
+  border-radius: 0.8rem;
+  background-color: color($dark, card);
+  position: relative;
+  > * {
+    position: relative;
+  }
+  &:hover {
+    background-color: lighten(darken(color($dark, text), 90%), 5%);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: circle(0% at 50% 50%);
+    background-color: darken(color($dark, text), 90%);
+    transition: clip-path 0.4s ease;
+    border-radius: inherit;
+  }
+  &:active::before {
+    clip-path: circle(75% at 50% 50%);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 98%;
+    border-radius: 0.8rem 0.8rem 0 0;
+  }
+  @media (max-width: 682px) {
+    width: 100%;
+  }
+}
+
+//up and down
 .up,
 .down {
   display: flex;
   align-items: center;
   img {
     margin-right: 0.5rem;
-    + span {
-      font-size: 1.4rem;
-    }
   }
 }
 
-.card {
-  background-color: color($dark, card);
+//cursor set to pointer for toggle
+.pointer {
+  cursor: pointer;
+}
+
+//bold text
+.bold {
+  color: color($dark, heading);
+}
+
+//up - green
+.up {
+  color: color($up-down, up);
+}
+
+//down - red
+.down {
+  color: color($up-down, down);
+}
+
+//count in followers
+.number {
+  font-size: 6rem;
+}
+
+//count in overview
+.number-sm {
+  font-size: 4rem;
+}
+
+//social
+$social-i: (facebook, twitter, instagram, youtube);
+@each $s in $social-i {
+  .#{$s}::after {
+    background: color($social, $s);
+  }
 }

@@ -1,20 +1,6 @@
-body {
-  background-color: color($dark, bg);
-  transition: all 0.4s ease;
-}
-
-main {
-  width: 85%;
-  margin: auto;
-  color: color($dark, text);
-}
-
-header {
-  padding: 4rem 0;
+header.initial {
   display: flex;
   justify-content: space-between;
-  font-weight: 700;
-
   @media (max-width: 682px) {
     flex-direction: column;
     .heading {
@@ -25,27 +11,15 @@ header {
       border-top: 0.1rem solid color($light, text);
     }
   }
-}
-
-header .heading {
-  h1 {
-    font-size: 2.8rem;
-    @media (max-width: 399px) {
-      font-size: 6.3vw;
-    }
-  }
-  p {
-    font-size: 1.4rem;
+  .heading p {
     margin-top: 0.5rem;
   }
 }
 
-header .theme-switcher {
+header.initial .theme-switcher {
   display: flex;
   align-items: center;
-  cursor: pointer;
   .label-text {
-    font-size: 1.4rem;
     margin-right: 1rem;
   }
   .switch-container {
@@ -54,10 +28,8 @@ header .theme-switcher {
     background: color($toggler, dark-theme);
     border-radius: 1.2rem;
     position: relative;
-    cursor: pointer;
     #switch {
       opacity: 0;
-      cursor: pointer;
     }
     &::before {
       content: "";
