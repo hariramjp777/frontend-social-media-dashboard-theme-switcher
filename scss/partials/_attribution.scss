@@ -1,0 +1,37 @@
+.attribution {
+  position: absolute;
+  bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  width: 100%;
+  font-family: verdana, sans-serif;
+  a {
+    color: color($social, link);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:nth-child(1) {
+      border-right: 0.1rem solid;
+      padding-right: 1rem;
+    }
+    &:nth-child(2) {
+      padding-left: 1rem;
+    }
+  }
+  @media (max-width: 1388px) {
+    position: static;
+    padding: 3rem 0;
+  }
+  @media (max-width: 252px) {
+    a {
+      display: block;
+      padding: 0 !important;
+      border: 0 !important;
+    }
+  }
+  @media (min-width: 1389px) and (max-height: 894px) {
+    position: static;
+    padding: 3rem 0;
+  }
+}
