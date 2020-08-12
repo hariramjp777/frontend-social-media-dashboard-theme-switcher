@@ -1,0 +1,27 @@
+.bold {
+  color: color($dark, heading);
+}
+
+.up {
+  color: color($up-down, up);
+}
+
+.down {
+  color: color($up-down, down);
+}
+
+.up,
+.down {
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: 0.5rem;
+    + span {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.card {
+  background-color: color($dark, card);
+}

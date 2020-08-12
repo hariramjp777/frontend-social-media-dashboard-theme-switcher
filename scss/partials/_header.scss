@@ -1,0 +1,82 @@
+body {
+  background-color: color($dark, bg);
+  transition: all 0.4s ease;
+}
+
+main {
+  width: 85%;
+  margin: auto;
+  color: color($dark, text);
+}
+
+header {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+
+  @media (max-width: 682px) {
+    flex-direction: column;
+    .heading {
+      margin-bottom: 2rem;
+    }
+    .theme-switcher {
+      padding-top: 2rem;
+      border-top: 0.1rem solid color($light, text);
+    }
+  }
+}
+
+header .heading {
+  h1 {
+    font-size: 2.8rem;
+    @media (max-width: 399px) {
+      font-size: 6.3vw;
+    }
+  }
+  p {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+  }
+}
+
+header .theme-switcher {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  .label-text {
+    font-size: 1.4rem;
+    margin-right: 1rem;
+  }
+  .switch-container {
+    width: 5rem;
+    height: 2.5rem;
+    background: color($toggler, dark-theme);
+    border-radius: 1.2rem;
+    position: relative;
+    cursor: pointer;
+    #switch {
+      opacity: 0;
+      cursor: pointer;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1.9rem;
+      height: 1.9rem;
+      border-radius: 50%;
+      top: 50%;
+      left: 0.3rem;
+      right: 100%;
+      transform: translate(0, -50%);
+      background-color: color($dark, bg-pattern);
+      transition: left 0.5s ease;
+    }
+    &:hover::before {
+      box-shadow: 0.3rem 0.1rem 1rem lighten(color($dark, bg-pattern), 20%);
+    }
+  }
+  @media (max-width: 682px) {
+    justify-content: space-between;
+  }
+}

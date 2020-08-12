@@ -1,0 +1,89 @@
+.followers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-weight: 700;
+  width: 28rem;
+  border-radius: 0.8rem;
+  padding: 3.5rem 0;
+  .card-body {
+    text-align: center;
+    position: relative;
+    li:nth-child(1),
+    li:nth-child(3) {
+      justify-content: center;
+    }
+    li:nth-child(1) {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 0.5rem;
+        + span {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    li:nth-child(2) {
+      margin: 3.5rem 0;
+      display: flex;
+      flex-direction: column;
+      span.number {
+        font-size: 6rem;
+        + span {
+          margin-top: 0.3rem;
+          font-size: 1.3rem;
+          letter-spacing: 0.7rem;
+          text-transform: uppercase;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  &:hover {
+    background-color: lighten(darken(color($dark, text), 90%), 5%);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: circle(0% at 50% 50%);
+    background-color: darken(color($dark, text), 90%);
+    transition: clip-path 0.4s ease;
+    border-radius: inherit;
+  }
+  &:active::before {
+    clip-path: circle(75% at 50% 50%);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 98%;
+    border-radius: 0.8rem 0.8rem 0 0;
+  }
+  @media (max-width: 682px) {
+    width: 100%;
+  }
+}
+
+//social-colors
+$social-i: (facebook, twitter, instagram, youtube);
+@each $s in $social-i {
+  .#{$s}::after {
+    background: color($social, $s);
+  }
+}

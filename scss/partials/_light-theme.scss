@@ -1,0 +1,32 @@
+body.light-theme {
+  background-color: color($light, bg);
+  main {
+    color: color($light, text);
+  }
+  .bold {
+    color: color($light, heading);
+  }
+  .card {
+    background-color: color($light, card);
+    &:hover {
+      background-color: lighten(color($light, text), 40%);
+    }
+    &::before {
+      background-color: darken(#fff, 10%);
+    }
+  }
+}
+
+body.light-theme main header .theme-switcher > .switch-container {
+  background: color($toggler, light-theme);
+  &::before {
+    left: 2.7rem;
+    background-color: color($light, bg-pattern);
+  }
+  &:hover {
+    background-color: color($light, toggle-hover);
+    &::before {
+      box-shadow: 0.2rem 0.2rem 2.3rem #fff;
+    }
+  }
+}

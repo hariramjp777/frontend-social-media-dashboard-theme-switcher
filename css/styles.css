@@ -36,4 +36,336 @@ body img {
       -ms-user-select: none;
           user-select: none;
 }
+
+.bold {
+  color: white;
+}
+
+.up {
+  color: #1db489;
+}
+
+.down {
+  color: #dc414c;
+}
+
+.up,
+.down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.up img,
+.down img {
+  margin-right: 0.5rem;
+}
+
+.up img + span,
+.down img + span {
+  font-size: 1.4rem;
+}
+
+.card {
+  background-color: #252a41;
+}
+
+body {
+  background-color: #1e202a;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+main {
+  width: 85%;
+  margin: auto;
+  color: #8b97c6;
+}
+
+header {
+  padding: 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 700;
+}
+
+@media (max-width: 682px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .heading {
+    margin-bottom: 2rem;
+  }
+  header .theme-switcher {
+    padding-top: 2rem;
+    border-top: 0.1rem solid #63687e;
+  }
+}
+
+header .heading h1 {
+  font-size: 2.8rem;
+}
+
+@media (max-width: 399px) {
+  header .heading h1 {
+    font-size: 6.3vw;
+  }
+}
+
+header .heading p {
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+header .theme-switcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+header .theme-switcher .label-text {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+
+header .theme-switcher .switch-container {
+  width: 5rem;
+  height: 2.5rem;
+  background: -webkit-gradient(linear, left top, right top, color-stop(3%, #378fe6), to(#3eda82));
+  background: linear-gradient(90deg, #378fe6 3%, #3eda82);
+  border-radius: 1.2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+header .theme-switcher .switch-container #switch {
+  opacity: 0;
+  cursor: pointer;
+}
+
+header .theme-switcher .switch-container::before {
+  content: "";
+  position: absolute;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  top: 50%;
+  left: 0.3rem;
+  right: 100%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  background-color: #1f212e;
+  -webkit-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+}
+
+header .theme-switcher .switch-container:hover::before {
+  -webkit-box-shadow: 0.3rem 0.1rem 1rem #484d6a;
+          box-shadow: 0.3rem 0.1rem 1rem #484d6a;
+}
+
+@media (max-width: 682px) {
+  header .theme-switcher {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.followers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  font-weight: 700;
+  width: 28rem;
+  border-radius: 0.8rem;
+  padding: 3.5rem 0;
+}
+
+.card .card-body {
+  text-align: center;
+  position: relative;
+}
+
+.card .card-body li:nth-child(1),
+.card .card-body li:nth-child(3) {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card .card-body li:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .card-body li:nth-child(1) img {
+  margin-right: 0.5rem;
+}
+
+.card .card-body li:nth-child(1) img + span {
+  font-size: 1.4rem;
+}
+
+.card .card-body li:nth-child(2) {
+  margin: 3.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card .card-body li:nth-child(2) span.number {
+  font-size: 6rem;
+}
+
+.card .card-body li:nth-child(2) span.number + span {
+  margin-top: 0.3rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.card:hover {
+  background-color: #0d0d0d;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-clip-path: circle(0% at 50% 50%);
+          clip-path: circle(0% at 50% 50%);
+  background-color: black;
+  -webkit-transition: -webkit-clip-path 0.4s ease;
+  transition: -webkit-clip-path 0.4s ease;
+  transition: clip-path 0.4s ease;
+  transition: clip-path 0.4s ease, -webkit-clip-path 0.4s ease;
+  border-radius: inherit;
+}
+
+.card:active::before {
+  -webkit-clip-path: circle(75% at 50% 50%);
+          clip-path: circle(75% at 50% 50%);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 98%;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+@media (max-width: 682px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.facebook::after {
+  background: #198ff5;
+}
+
+.twitter::after {
+  background: #1ca0f2;
+}
+
+.instagram::after {
+  background: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
+  background: linear-gradient(90deg, #fdc468, #df4996);
+}
+
+.youtube::after {
+  background: #c4032a;
+}
+
+body.light-theme {
+  background-color: white;
+}
+
+body.light-theme main {
+  color: #63687e;
+}
+
+body.light-theme .bold {
+  color: #1e202a;
+}
+
+body.light-theme .card {
+  background-color: #f0f2fa;
+}
+
+body.light-theme .card:hover {
+  background-color: #d1d3db;
+}
+
+body.light-theme .card::before {
+  background-color: #e6e6e6;
+}
+
+body.light-theme main header .theme-switcher > .switch-container {
+  background: #aeb3cb;
+}
+
+body.light-theme main header .theme-switcher > .switch-container::before {
+  left: 2.7rem;
+  background-color: #f5f7ff;
+}
+
+body.light-theme main header .theme-switcher > .switch-container:hover {
+  background-color: #198ff5;
+}
+
+body.light-theme main header .theme-switcher > .switch-container:hover::before {
+  -webkit-box-shadow: 0.2rem 0.2rem 2.3rem #fff;
+          box-shadow: 0.2rem 0.2rem 2.3rem #fff;
+}
 /*# sourceMappingURL=styles.css.map */
