@@ -10,3 +10,15 @@ themeSwitch.addEventListener("input", () =>
 labelText.addEventListener("click", () => {
   themeSwitch.click();
 });
+
+window.addEventListener("load", () => {
+  let version = Number(
+    navigator.userAgent.substring(
+      navigator.userAgent.indexOf("Chrome") + "Chrome".length - 1 + 2,
+      navigator.userAgent.indexOf("Chrome") + "Chrome".length - 1 + 2 + 2
+    )
+  );
+  if (version < 84) {
+    body.classList.add("old");
+  }
+});

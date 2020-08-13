@@ -401,6 +401,23 @@ header.initial .theme-switcher .switch-container:hover::before {
   }
 }
 
+body.old header {
+  padding: 4rem 0 3rem;
+}
+
+body.old header header.initial {
+  padding: 4rem 0;
+}
+
+body.old .card-container {
+  gap: 0;
+}
+
+body.old .card {
+  margin-bottom: 2rem;
+  margin-right: 1.4rem;
+}
+
 .attribution {
   position: absolute;
   bottom: 1.5rem;
