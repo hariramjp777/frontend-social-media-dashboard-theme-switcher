@@ -85,6 +85,8 @@ header h2 {
   border-radius: 0.8rem;
   background-color: #252a41;
   position: relative;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .card > * {
@@ -93,6 +95,8 @@ header h2 {
 
 .card:hover {
   background-color: #0d0d0d;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .card::before {

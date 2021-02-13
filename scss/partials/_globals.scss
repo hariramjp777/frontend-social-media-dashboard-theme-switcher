@@ -40,11 +40,13 @@ header {
   border-radius: 0.8rem;
   background-color: color($dark, card);
   position: relative;
+  transition: 0.4s;
   > * {
     position: relative;
   }
   &:hover {
     background-color: lighten(darken(color($dark, text), 90%), 5%);
+    transform: scale(1.02);
   }
   &::before {
     content: "";
